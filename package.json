@@ -1,78 +1,43 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+{
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-  console.log('')
-  console.log('')
-  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
-  console.log(`[Start] ${new Date()}`);
-  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════════════════════════════]╗');
-  console.log(`Logged in as * [ " ${client.user.username} " ]`);
-  console.log('')
-  console.log('Informations :')
-  console.log('')
-  console.log(`servers! [ " ${client.guilds.size} " ]`);
-  console.log(`Users! [ " ${client.users.size} " ]`);
-  console.log(`channels! [ " ${client.channels.size} " ]`);
-  console.log('╚[════════════════════════════════════]╝')
-  console.log('By Wenteed')
-  console.log('╔[════════════]╗')
-  console.log(' Bot Is Online')
-  console.log('╚[════════════]╝')
-  console.log('')
-  console.log('')
+  "name": "Emoko",
 
-  
-  
-  
- 
-  
-  
-  
-  
-  
-  });
-  
-   
- 
- 
- 
- 
- 
- 
- 
- 
-const adminprefix = "S"; 
-const devs = ['470320463021604864'];
-client.on('message', message => {
-  var argresult = message.content.split(` `).slice(1).join(' ');
-    if (!devs.includes(message.author.id)) return;
-   
-if (message.content.startsWith(adminprefix + 'sg')) {
-  client.user.setGame(argresult);
-    message.channel.sendMessage(`**${argresult} تم تغير البلاينق الى :white_check_mark:**`)
-} else
-  if (message.content.startsWith(adminprefix + 'sn')) {
-client.user.setUsername(argresult).then
-    message.channel.sendMessage(`**${argresult}** : تم تغير اسمك الى :white_check_mark: `)
-return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
-} else
-  if (message.content.startsWith(adminprefix + 'sa')) {
-client.user.setAvatar(argresult);
-  message.channel.sendMessage(`**${argresult}** : تم تغير صورتك الى :white_check_mark: `);
-      } else    
-if (message.content.startsWith(adminprefix + 'st')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/idk");
-    message.channel.sendMessage(`**:white_check_mark: تم تغير الحاله الى ستريمنق ${argresult}**`)
+  "description": "Emoko",
+
+  "version": "0.0.0",
+
+  "main": "bot.js",
+
+  "scripts": {
+
+    "start": "node bot.js"
+
+  },
+
+  "dependencies": {
+
+   "discord.js": "^11.3.2",
+
+    "fs": "^0.0.2",
+
+    "giphy-api": "1.2.7",
+
+    "math-expression-evaluator":"1.2.17",
+
+    "common-tags":"1.7.2",
+
+    "moment":"2.22.2",
+
+     "canvas":"1.6.11",
+
+    "jimp":"0.3.5",
+
+    "hastebin-gen":"1.3.1",
+
+    "google-translate-api":"2.3.0",
+
+    "ascii-data-table":"2.1.1"
+
+  }
+
 }
- 
-});
- 
- 
- 
- 
- 
-client.login("NDcwMzIwNDYzMDIxNjA0ODY0.DsdrwA.CjHL7n-TdTjBWC6epTsYtS4Z1Jc");
